@@ -84,32 +84,3 @@ You can change this quota by using the ``--size-max`` argument. For example:
 
 With this argument, the programm will only ask for your permission to proceed
 with a total archive of more than 100MB.
-
-### TODO
-
-    [ ] Extend the test utilities to other languages
-    [ ] Add an "ignore" option to ignore other files (logs, sqlite database,
-        image files, etc)
-    [ ] Check other pythonic dependencies (django, py.test). Won't be possible
-        for non-python test-programs, though
-
-### Done
-
-    [X] implements py.test, if possible
-    [X] Fixing bug: when a file vanished, the program fails.
-    [X] I remember I made the first bits of the code after reading an article...
-        [X] Find the link and name of the original author
-        [X] add appropriate credits
-    [X] Bugfix: When doing (e.g.) hg commit, it opens temporary files that are
-        detected as "changed", and the daemon starts tests. It should be ignored
-        (ref. ignore-directories)
-    [X] Feature: If the scanned directory size if larger than the option limit,
-    asking for the user to accept processing or not. Default option limit is 25MB
-    [X] OBSOLETE: Add the possibility to run a custom command.
-        (eg. ``python manage.py test myapp.MyTest``)
-    [X] Erase the custom command option. Too dangerous
-    [X] Check the only default dependency: ``nosetests``.
-    [X] Add an "custom argument" option. The user may want to run specific
-        commands, but the only way to do so is to send arguments rather than the
-        whole external command. Tests must pass, though (no `&`, for example)
-
