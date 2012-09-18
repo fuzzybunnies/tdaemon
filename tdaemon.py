@@ -56,10 +56,6 @@ def escapearg(args):
     return re.sub(SPECIAL_CHARS_REGEX_PATTERN, '', args) 
 
 class Watcher(object):
-    """
-    Watcher class. This is the daemon that is watching every file in the
-    directory and subdirectories, and that runs the test process.
-    """
     file_list = {}
     debug = False
 
@@ -217,9 +213,6 @@ class Watcher(object):
                 self.file_list = new_file_list
 
 def main(prog_args=None):
-    """
-    What do you expect?
-    """
     if prog_args is None:
         prog_args = sys.argv
 
