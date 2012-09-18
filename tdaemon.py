@@ -87,10 +87,6 @@ class Watcher(object):
         if not test_program in IMPLEMENTED_TEST_PROGRAMS:
             raise InvalidTestProgram('The `%s` is unknown, or not yet implemented. Please chose another one.' % test_program)
 
-        if custom_args:
-            if not ask("WARNING!!!\nYou are about to run the following command\n\n   $ %s\n\nAre you sure you still want to proceed [y/N]? " % self.get_cmd()):
-                raise CancelDueToUserRequest('Test cancelled...')
-
     def check_dependencies(self):
         "Checks if the test program is available in the python environnement"
         if self.test_program == 'nose':
