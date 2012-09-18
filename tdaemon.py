@@ -242,7 +242,8 @@ def main(prog_args=None):
             if not ask(message):
                 raise CancelDueToUserRequest('Ok, thx, bye...')
 
-        print "Ready to watch file changes..."
+        watcher.run_tests()
+
         watcher.loop()
     except Exception, msg:
         print msg
